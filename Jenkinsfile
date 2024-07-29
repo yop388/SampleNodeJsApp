@@ -7,7 +7,7 @@ pipeline {
 	    SERVICE_NAME="NodejsService"
 	    TASK_DEFINITION_NAME="nodejs-task02"
 	    DESIRED_COUNT="1"
-        IMAGE_REPO_NAME="nodejsapp:latest"
+        IMAGE_REPO_NAME="nodejsapp"
         //Do not edit the variable IMAGE_TAG. It uses the Jenkins job build ID as a tag for the new image.
         IMAGE_TAG="${env.BUILD_ID}"
         //Do not edit REPOSITORY_URI.
