@@ -39,8 +39,8 @@ pipeline {
     stage('Releasing') {
      steps{  
          script {
-			    ocker.withRegistry("https://" + REPOSITORY_URI, "ecr:${AWS_DEFAULT_REGION}:" + registryCredential) {
-            dockerImage.push()
+			docker.withRegistry("https://" + REPOSITORY_URI, "ecr:${AWS_DEFAULT_REGION}:" + registryCredential) {
+                    	dockerImage.push()
             }
          }
        }
