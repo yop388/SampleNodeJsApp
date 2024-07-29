@@ -2,12 +2,12 @@ pipeline {
     agent any
     environment {
         AWS_ACCOUNT_ID="381492291819"
-        AWS_DEFAULT_REGION="ca-central-1"
+        AWS_DEFAULT_REGION="us-east-1"
 	    CLUSTER_NAME="NodeJsCluster"
 	    SERVICE_NAME="NodejsService"
 	    TASK_DEFINITION_NAME="nodejs-task02"
 	    DESIRED_COUNT="1"
-        IMAGE_REPO_NAME="nodejsapp"
+        IMAGE_REPO_NAME="nodejsapp:latest"
         //Do not edit the variable IMAGE_TAG. It uses the Jenkins job build ID as a tag for the new image.
         IMAGE_TAG="${env.BUILD_ID}"
         //Do not edit REPOSITORY_URI.
