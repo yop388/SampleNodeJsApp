@@ -1,8 +1,8 @@
 pipeline {
-    agent none
+    agent any
     environment {
         AWS_ACCOUNT_ID="381492291819"
-        AWS_DEFAULT_REGION="ca-central-1"
+        AWS_DEFAULT_REGION="us-east-1"
 	    CLUSTER_NAME="NodeJsCluster"
 	    SERVICE_NAME="NodejsService"
 	    TASK_DEFINITION_NAME="nodejs-task02"
